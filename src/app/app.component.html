@@ -1,0 +1,194 @@
+<div class="container">
+    <br>
+    <h1>Pipes</h1>
+
+    <table class="table">
+        <thead class="thead-overse">
+            <tr>
+                <th scope="col">Variable</th>
+                <th scope="col">Pipe</th>
+                <th scope="col">Producto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Letra en mayuscula -->
+                <th scope="row">1</th>
+                <td>{{ nombre }}</td>
+                <td>uppercase</td>
+                <td>KMILO</td>
+            </tr>
+
+            <tr>
+                <!-- letra en minuscula  -->
+                <th scope="row">1</th>
+                <td>{{ nombre }}</td>
+                <td>lowercase</td>
+                <td>kmilo</td>
+            </tr>
+
+            <tr>
+                <!-- deja las ultimas tres letras de una palabra  -->
+                <th scope="row">1</th>
+                <td>{{ nombre }}</td>
+                <td> slice:3</td>
+                <td>{{ nombre | slice:3 }}</td>
+            </tr>
+
+            <tr>
+                <!-- muestra las tres primeras letras de una palabra -->
+                <th scope="row">1</th>
+                <td>{{ nombre }}</td>
+                <td> slice:0:3</td>
+                <td>{{ nombre | slice:0:3 }}</td>
+            </tr>
+
+            <tr>
+                <!-- muestra las tres primeras posiciones en un array -->
+                <th scope="row">1</th>
+                <td>1,2,3,4,5,6,7,8,9</td>
+                <td> slice:0:3</td>
+                <td>{{ arreglo | slice:0:3 }}</td>
+            </tr>
+
+            <tr>
+                <!-- recibe un string y muestra el valir en numero entero -->
+                <th scope="row">1</th>
+                <td>{{ PI }}</td>
+                <td> number:'3.1'</td>
+                <td>{{ PI | number:'3.0-0' }}</td>
+            </tr>
+
+            <tr>
+                <!-- recibe un string y muestra un string  -->
+                <th scope="row">1</th>
+                <td>{{ PI }}</td>
+                <td> number:'1.0-2'</td>
+                <td>{{ PI | number:'1.0-2' }}</td>
+            </tr>
+
+            <tr>
+                <!--pipe del porcentage  -->
+                <th scope="row">1</th>
+                <td>{{ a }}</td>
+                <td> percent</td>
+                <td>{{ a | percent }}</td>
+            </tr>
+
+            <tr>
+                <!--  pipe del porcentage -->
+                <th scope="row">1</th>
+                <td>{{ a }}</td>
+                <td> percent:'2.2-2'</td>
+                <td>{{ a | percent:'2.2-2' }}</td>
+            </tr>
+
+            <tr>
+                <!--  pipe del moneda -->
+                <th scope="row">1</th>
+                <td>{{ salario }}</td>
+                <td> currency </td>
+                <td>{{ salario | currency }}</td>
+            </tr>
+
+            <tr>
+                <!--  pipe del moneda -->
+                <th scope="row">1</th>
+                <td>{{ salario }}</td>
+                <td> currency:'EUR' </td>
+                <td>{{ salario | currency:'EUR' }}</td>
+            </tr>
+
+            <tr>
+                <!--  pipe del moneda -->
+                <th scope="row">1</th>
+                <td>{{ salario }}</td>
+                <td> currency:'EUR':true:'4.0-0' </td>
+                <td>{{ salario | currency:'EUR':true:'4.0-0' }}</td>
+            </tr>
+
+            <tr>
+                <!--  pipe del moneda -->
+                <th scope="row">1</th>
+                <td>{{ salario }}</td>
+                <td> number:'2-2' </td>
+                <td>{{ salario | number:'.2-2' }}</td>
+            </tr>
+
+            <tr>
+                <!--  pipe del moneda -->
+                <th scope="row">1</th>
+                <td>{{ valorDePromesa }}</td>
+                <td> async </td>
+                <td>{{ valorDePromesa | async }}</td>
+            </tr>
+
+            <tr>
+                <!--  pipe del moneda -->
+                <th scope="row">1</th>
+                <td>{{ fecha }}</td>
+                <td> date </td>
+                <td>{{ fecha | date }}</td>
+            </tr>
+
+            <tr>
+                <!--  pipe del moneda -->
+                <th scope="row">1</th>
+                <td>{{ fecha }}</td>
+                <td> date:'medium' </td>
+                <td>{{ fecha | date:'medium' }}</td>
+            </tr>
+
+            <tr>
+                <!--  pipe del moneda -->
+                <th scope="row">1</th>
+                <td>{{ fecha }}</td>
+                <td> date:'MMMM - dd' </td>
+                <td>{{ fecha | date:'medium' }}</td>
+            </tr>
+
+            <tr>
+                <!--  pipe del moneda -->
+                <th scope="row">1</th>
+                <td>{{ fecha }}</td>
+                <td> date:'MMMM - dd' </td>
+                <td>{{ fecha | date:'short' }}</td>
+            </tr>
+
+            <tr>
+                <!--  pipe del moneda -->
+                <th scope="row">1</th>
+                <td>{{ nombre2 }}</td>
+                <td> capitalizado </td>
+                <td>{{ nombre2 | capitalizado:false }}</td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+
+
+    <h4>Slice</h4>
+    <ul>
+        <li *ngFor="let item of arreglo | slice:5:20">{{ item }}</li>
+    </ul>
+
+    <!-- PIpe JSON -->
+    <h4>JSON</h4>
+    <pre>
+
+      {{ heroe | json }}
+    </pre>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+</div>
