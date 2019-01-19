@@ -163,6 +163,21 @@
                 <td>{{ nombre2 | capitalizado:false }}</td>
             </tr>
 
+            <tr>
+                <!--  pipe del moneda -->
+                <th scope="row">1</th>
+                <td>{{ nombre2 }}</td>
+                <td>
+                    contrasena: {{ activar }}
+                    <br>
+                    <button (click)="activar = !activar" type="button" class="bt5n btn-outile-primary">
+                      Activar/Desactivar
+                    </button>
+                </td>
+                <td> {{ activar }} </td>
+                <td>{{ nombre2 | contrasena:activar }}</td>
+            </tr>
+
 
 
 
@@ -182,6 +197,10 @@
 
       {{ heroe | json }}
     </pre>
+
+
+    <iframe width="560" height="315" [src]="video | domseguro:'https://www.youtube.com/watch?v=UKMvI-UF4-Q'" framebordert="0" allowfullscreen></iframe>
+
 
     <br>
     <br>

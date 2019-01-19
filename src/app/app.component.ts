@@ -31,4 +31,8 @@ export class AppComponent {
   });
 
   fecha = new Date();
+  // tslint:disable-next-line:no-inferrable-types
+  activar: boolean = true;
+
+  video = 'https://www.youtube.com/watch?v=UKMvI-UF4-Q';
 }
